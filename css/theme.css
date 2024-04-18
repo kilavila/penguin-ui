@@ -1,0 +1,22 @@
+:root {
+	--pen-primary: #ffd7be;
+	--pen-primary-content: #0b0b0b;
+	--pen-secondary: #c7b8ea;
+	--pen-secondary-content: #0b0b0b;
+	--pen-accent: #ffd7e4;
+	--pen-accent-content: #0b0b0b;
+	--pen-neutral: #272727;
+	--pen-neutral-content: #fbfbfb;
+	--pen-base-100: #fbfbfb;
+	--pen-base-200: #f2f2f2;
+	--pen-base-300: #e3e3e3;
+	--pen-base-content: #0b0b0b;
+	--pen-info: #a1c9f2;
+	--pen-info-content: #0b0b0b;
+	--pen-success: #c6e2b5;
+	--pen-success-content: #0b0b0b;
+	--pen-warning: #ffe578;
+	--pen-warning-content: #0b0b0b;
+	--pen-error: #ffc5c5;
+	--pen-error-content: #0b0b0b;
+}
