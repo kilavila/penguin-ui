@@ -1,7 +1,20 @@
-@import url("theme.css");
+/* INFO: IMPORT COLORSCHEME */
+@import url("/css/penguin-ui-light.css");
+@import url("https://www.nerdfonts.com/assets/css/webfont.css");
+
+/* INFO: IMPORT COMPONENTS */
+/* INFO: BUTTONS */
+@import url("/components/button/button.css");
+@import url("/components/button/raised/button-raised.css");
+@import url("/components/button/outlined/button-outlined.css");
+@import url("/components/button/ghost/button-ghost.css");
 
 * {
 	box-sizing: border-box;
+}
+*::selection {
+	background-color: var(--pen-primary);
+	color: var(--pen-primary-content);
 }
 
 html,
@@ -15,4 +28,109 @@ body {
 body {
 	background-color: var(--pen-base-100);
 	color: var(--pen-base-content);
+}
+
+body.preview {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 12px;
+}
+body.preview .elements {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	justify-content: center;
+	padding: 12px;
+}
+body.preview .elements > * {
+	margin: 12px;
+}
+pre {
+	width: 100%;
+	max-width: 550px;
+}
+pre code {
+	position: relative;
+	display: block;
+	margin-top: 24px;
+	padding: 24px 36px;
+	background-color: var(--pen-neutral);
+	border-radius: 4px;
+	color: var(--pen-neutral-content);
+	font-size: 1.25em;
+}
+.code-control-buttons {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	padding: 10px;
+}
+.code-control-buttons div {
+	width: 12px;
+	height: 12px;
+	margin: 3px;
+	border-radius: 12px;
+}
+.code-control-buttons div:nth-child(1) { background-color: var(--pen-error); }
+.code-control-buttons div:nth-child(2) { background-color: var(--pen-warning); }
+.code-control-buttons div:nth-child(3) { background-color: var(--pen-success); }
+.code-tag {
+	color: var(--pen-info);
+}
+.code-class {
+	color: var(--pen-warning);
+}
+.code-string {
+	color: var(--pen-success);
+}
+
+pui-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	background-color: var(--pen-primary);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .12), 0 5px 15px rgba(0, 0, 0, .24);
+}
+pui-navbar .branding a {
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--pen-primary-content);
+}
+pui-navbar nav {
+	position: relative;
+}
+.dropdown {
+  display: none;
+	position: absolute;
+	top: 110%;
+	right: 0;
+	min-width: 200px;
+	background-color: var(--pen-base-100);
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 3px 6px rgba(0, 0, 0, .24);
+	overflow: hidden;
+}
+.dropdown.open {
+  display: block;
+}
+.dropdown ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.dropdown li {
+	margin: 0;
+	padding: 0;
+}
+.dropdown li a {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+.dropdown li a:hover {
+	background-color: var(--pen-base-200);
 }

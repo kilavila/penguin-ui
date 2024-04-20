@@ -1,22 +1,40 @@
 :root {
 	--pen-primary: #ffd7be;
+	--pen-primary-dark: hsl(23 100% 62%);
 	--pen-primary-content: #0b0b0b;
+
 	--pen-secondary: #c7b8ea;
+	--pen-secondary-dark: hsl(258 54% 57%);
 	--pen-secondary-content: #0b0b0b;
+
 	--pen-accent: #ffd7e4;
+	--pen-accent-dark: hsl(341 100% 67%);
 	--pen-accent-content: #0b0b0b;
+
 	--pen-neutral: #272727;
 	--pen-neutral-content: #fbfbfb;
+
 	--pen-base-100: #fbfbfb;
+	--pen-base-100-dark: hsl(0 0% 73%);
 	--pen-base-200: #f2f2f2;
+	--pen-base-200-dark: hsl(0 0% 70%);
 	--pen-base-300: #e3e3e3;
+	--pen-base-300-dark: hsl(0 0% 64%);
 	--pen-base-content: #0b0b0b;
+
 	--pen-info: #a1c9f2;
+	--pen-info-dark: hsl(210 76% 54%);
 	--pen-info-content: #0b0b0b;
+
 	--pen-success: #c6e2b5;
+	--pen-success-dark: hsl(97 44% 55%);
 	--pen-success-content: #0b0b0b;
+
 	--pen-warning: #ffe578;
+	--pen-warning-dark: hsl(48 100% 49%);
 	--pen-warning-content: #0b0b0b;
+
 	--pen-error: #ffc5c5;
+	--pen-error-dark: hsl(0 100% 64%);
 	--pen-error-content: #0b0b0b;
 }

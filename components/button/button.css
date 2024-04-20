@@ -1,0 +1,77 @@
+.btn {
+	padding: 0.5em 1.3em;
+	font-size: 1em;
+	text-transform: uppercase;
+	border: 2px solid var(--pen-base-200);
+	border-radius: 4px;
+	background-color: var(--pen-base-200);
+	color: var(--pen-base-content);
+	cursor: pointer;
+	transition-duration: 0.1s;
+}
+
+.btn-primary {
+	background-color: var(--pen-primary);
+	color: var(--pen-primary-content);
+	border-color: var(--pen-primary);
+}
+
+.btn-secondary {
+	background-color: var(--pen-secondary);
+	color: var(--pen-secondary-content);
+	border-color: var(--pen-secondary);
+}
+
+.btn-accent {
+	background-color: var(--pen-accent);
+	color: var(--pen-accent-content);
+	border-color: var(--pen-accent);
+}
+
+.btn-neutral {
+	background-color: var(--pen-neutral);
+	color: var(--pen-neutral-content);
+	border-color: var(--pen-neutral);
+}
+
+.btn-base-100 {
+	background-color: var(--pen-base-100);
+	color: var(--pen-base-content);
+	border-color: var(--pen-base-100);
+}
+
+.btn-base-200 {
+	background-color: var(--pen-base-200);
+	color: var(--pen-base-content);
+	border-color: var(--pen-base-200);
+}
+
+.btn-base-300 {
+	background-color: var(--pen-base-300);
+	color: var(--pen-base-content);
+	border-color: var(--pen-base-300);
+}
+
+.btn-info {
+	background-color: var(--pen-info);
+	color: var(--pen-info-content);
+	border-color: var(--pen-info);
+}
+
+.btn-success {
+	background-color: var(--pen-success);
+	color: var(--pen-success-content);
+	border-color: var(--pen-success);
+}
+
+.btn-warning {
+	background-color: var(--pen-warning);
+	color: var(--pen-warning-content);
+	border-color: var(--pen-warning);
+}
+
+.btn-error {
+	background-color: var(--pen-error);
+	color: var(--pen-error-content);
+	border-color: var(--pen-error);
+}
