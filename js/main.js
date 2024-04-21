@@ -8,20 +8,12 @@ class PenguinNavbar extends HTMLElement {
 
     this.menuItems = [
       {
-        name: 'Home',
+        name: '<i class=\'nf nf-md-home\'></i> Home',
         link: '/index.html',
       },
       {
-        name: 'Button Ghost',
-        link: '/components/button/ghost/button-ghost.html',
-      },
-      {
-        name: 'Button Outlined',
-        link: '/components/button/outlined/button-outlined.html',
-      },
-      {
-        name: 'Button Raised',
-        link: '/components/button/raised/button-raised.html',
+        name: '<i class=\'nf nf-md-rectangle\'></i> Buttons',
+        link: '/components/button/button.html',
       },
     ];
 	}
@@ -45,8 +37,8 @@ class PenguinNavbar extends HTMLElement {
         <a href="/index.html">Penguin UI</a>
 			</div>
 			<nav>
-				<button id="menuToggle" class="btn btn-raised btn-base-100">
-					Menu
+				<button id="menuToggle" class="btn btn-ghost btn-neutral">
+					<i id="menuIcon" class="nf nf-md-menu"></i>
 				</button>
 				<div id="mainMenu" class="dropdown">
 					<ul>
@@ -59,6 +51,7 @@ class PenguinNavbar extends HTMLElement {
 
 	listeners() {
 		const menuButton = this.querySelector("#menuToggle");
+		const menuIcon = this.querySelector("#menuIcon");
     const mainMenu = this.querySelector("#mainMenu");
 
 		menuButton.addEventListener("click", (event) => {
@@ -66,12 +59,22 @@ class PenguinNavbar extends HTMLElement {
 
 			this.menuOpen = !this.menuOpen;
 
-			if (this.menuOpen) {
-        mainMenu.classList.add("open");
-			} else {
-        mainMenu.classList.remove("open");
-			}
+			this.menuOpen
+				? this.openMenu(menuIcon, mainMenu)
+				: this.closeMenu(menuIcon, mainMenu);
 		});
+	}
+
+	openMenu(icon, menu) {
+		mainMenu.classList.add("open");
+		menuIcon.classList.remove("nf-md-menu");
+		menuIcon.classList.add("nf-md-close");
+	}
+
+	closeMenu(icon, menu) {
+		mainMenu.classList.remove("open");
+		menuIcon.classList.remove("nf-md-close");
+		menuIcon.classList.add("nf-md-menu");
 	}
 
 }

@@ -1,8 +1,31 @@
-# `Penguin UI <('v')>`
+# Penguin UI
 
-Penguin UI is still under development. Please check back later.
+<img src="./assets/img/pengalf.png" width="150" style="float:left" />
 
-> The idea of behind this is to build a UI library that is not based on any framework.<br>
-> A free collection of UI components you can use for any project, personal and commercial.<br>
-> The first version of this will only function as a copy paste of HTML and CSS.<br>
-> Later versions will include JavaScript and feel more like a light and simple framework.
+### Introducing Penguin UI
+As a dev, I've always wanted a framework that's flexible and customizable.
+So, I built Penguin UI - a library of pre-made CSS classes and custom JS components.
+
+### Speed and flexibility
+Penguin UI includes a bunch of pre-designed components to get you started quickly.
+No installation or CDN needed, just copy and paste. Easy to use and customize.
+
+### Lightweight and modular
+I designed Penguin UI to be lightweight and modular, so you only include what you need.
+This means faster load times and better performance for your users.
+
+### Code example
+
+Plain HTML / CSS:
+```html
+<button class="btn btn-raised btn-primary">
+    My button
+</button>
+```
+
+JavaScript component:
+```html
+<pui-button pui-raised color="primary">
+    My button
+</pui-button>
+```

@@ -48,41 +48,35 @@
 
 .btn-ghost.btn-base-100 {
 	color: var(--pen-base-100-dark);
-	border-color: var(--pen-base-100-dark);
 }
 .btn-ghost.btn-base-100:hover {
 	background-color: var(--pen-base-100-dark);
-	color: var(--pen-base-100);
+	color: var(--pen-neutral);
 }
 .btn-ghost.btn-base-100:active {
-	background-color: var(--pen-base-100);
-	color: var(--pen-base-100-dark);
+	background-color: var(--pen-base-200);
 }
 
 .btn-ghost.btn-base-200 {
 	color: var(--pen-base-200-dark);
-	border-color: var(--pen-base-200-dark);
 }
 .btn-ghost.btn-base-200:hover {
 	background-color: var(--pen-base-200-dark);
-	color: var(--pen-base-100);
+	color: var(--pen-neutral);
 }
 .btn-ghost.btn-base-200:active {
 	background-color: var(--pen-base-200);
-	color: var(--pen-base-200-dark);
 }
 
 .btn-ghost.btn-base-300 {
 	color: var(--pen-base-300-dark);
-	border-color: var(--pen-base-300-dark);
 }
 .btn-ghost.btn-base-300:hover {
 	background-color: var(--pen-base-300-dark);
-	color: var(--pen-base-100);
+	color: var(--pen-neutral);
 }
 .btn-ghost.btn-base-300:active {
-	background-color: var(--pen-base-300);
-	color: var(--pen-base-300-dark);
+	background-color: var(--pen-base-200);
 }
 
 .btn-ghost.btn-info {
