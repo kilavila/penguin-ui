@@ -11,8 +11,6 @@ class PenguinButton extends HTMLElement {
 		this.buttonStyleSheet();
 		this.buttonAttribute();
 		this.buttonContent();
-
-		console.log(this.innerHTML);
 	}
 
 	buttonStyleSheet() {

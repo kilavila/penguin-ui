@@ -8,12 +8,19 @@ class PenguinNavbar extends HTMLElement {
 
     this.menuItems = [
       {
-        name: '<i class=\'nf nf-md-home\'></i> Home',
+        name: 'Home',
+        icon: 'nf-md-home',
         link: '/index.html',
       },
       {
-        name: '<i class=\'nf nf-md-rectangle\'></i> Buttons',
+        name: 'Buttons',
+        icon: 'nf-md-rectangle',
         link: '/components/button/button.html',
+      },
+      {
+        name: 'Badges',
+        icon: 'nf-cod-circle_small_filled',
+        link: '/components/badge/badge.html',
       },
     ];
 	}
@@ -26,7 +33,10 @@ class PenguinNavbar extends HTMLElement {
   menuItem(item) {
     return `
       <li>
-        <a href="${item.link}">${item.name}</a>
+        <a href="${item.link}">
+          <i class="nf ${item.icon}"></i>
+          ${item.name}
+        </a>
       </li>
     `;
   }
@@ -34,7 +44,10 @@ class PenguinNavbar extends HTMLElement {
 	render() {
 		this.innerHTML = `
 			<div class="branding">
-        <a href="/index.html">Penguin UI</a>
+        <a href="/index.html">
+          <img src="/assets/img/pengalf.png" alt="Penguin wizard" width="38" />
+          Penguin UI
+        </a>
 			</div>
 			<nav>
 				<button id="menuToggle" class="btn btn-ghost btn-neutral">
@@ -66,15 +79,15 @@ class PenguinNavbar extends HTMLElement {
 	}
 
 	openMenu(icon, menu) {
-		mainMenu.classList.add("open");
-		menuIcon.classList.remove("nf-md-menu");
-		menuIcon.classList.add("nf-md-close");
+		menu.classList.add("open");
+		icon.classList.remove("nf-md-menu");
+		icon.classList.add("nf-md-close");
 	}
 
 	closeMenu(icon, menu) {
-		mainMenu.classList.remove("open");
-		menuIcon.classList.remove("nf-md-close");
-		menuIcon.classList.add("nf-md-menu");
+		menu.classList.remove("open");
+		icon.classList.remove("nf-md-close");
+		icon.classList.add("nf-md-menu");
 	}
 
 }
