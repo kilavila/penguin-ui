@@ -6,10 +6,12 @@
 @import url("/components/badge/badge.css");
 @import url("/components/button/button.css");
 @import url("/components/carousel/carousel.css");
+@import url("/components/toast/toast.css");
 
 * {
 	box-sizing: border-box;
 }
+
 *::selection {
 	background-color: var(--pen-primary);
 	color: var(--pen-primary-content);
@@ -34,8 +36,8 @@ p {
 }
 
 i {
-  margin-right: 4px;
-  font-size: 1.15em;
+	margin-right: 4px;
+	font-size: 1.15em;
 }
 
 .hero {
@@ -46,6 +48,7 @@ i {
 	align-items: center;
 	justify-content: center;
 }
+
 .hero h1 {
 	margin: 0;
 	margin-bottom: 36px;
@@ -56,7 +59,7 @@ i {
 table {
 	width: 100%;
 	max-width: 550px;
-  margin-top: 24px;
+	margin-top: 24px;
 	background-color: var(--pen-base-200);
 	border-collapse: collapse;
 	border-radius: 4px;
@@ -65,15 +68,18 @@ table {
 	overflow: hidden;
 	box-shadow: 0 3px 6px var(--pen-base-300), 0 5px 15px var(--pen-base-200);
 }
+
 thead {
 	background-color: var(--pen-info);
 	color: var(--pen-info-content);
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
 tr:nth-child(even) {
 	background-color: var(--pen-base-300);
 }
+
 td {
 	padding: 12px 6px;
 }
@@ -85,6 +91,7 @@ td {
 	padding: 0;
 	list-style: none;
 }
+
 .preview ul li {
 	padding: 4px;
 }
@@ -95,6 +102,7 @@ body.preview {
 	align-items: center;
 	justify-content: flex-start;
 }
+
 body.preview .elements {
 	display: flex;
 	flex-wrap: wrap;
@@ -102,14 +110,17 @@ body.preview .elements {
 	justify-content: center;
 	padding: 12px;
 }
-body.preview .elements > * {
+
+body.preview .elements>* {
 	margin: 12px;
 }
+
 pre {
 	width: 100%;
 	max-width: 550px;
 	font-family: monospace;
 }
+
 pre code {
 	position: relative;
 	display: block;
@@ -120,6 +131,7 @@ pre code {
 	color: var(--pen-neutral-content);
 	font-size: 1.25em;
 }
+
 .code-control-buttons {
 	position: absolute;
 	top: 0;
@@ -127,27 +139,40 @@ pre code {
 	display: flex;
 	padding: 10px;
 }
+
 .code-control-buttons div {
 	width: 12px;
 	height: 12px;
 	margin: 3px;
 	border-radius: 12px;
 }
-.code-control-buttons div:nth-child(1) { background-color: var(--pen-error); }
-.code-control-buttons div:nth-child(2) { background-color: var(--pen-warning); }
-.code-control-buttons div:nth-child(3) { background-color: var(--pen-success); }
+
+.code-control-buttons div:nth-child(1) {
+	background-color: var(--pen-error);
+}
+
+.code-control-buttons div:nth-child(2) {
+	background-color: var(--pen-warning);
+}
+
+.code-control-buttons div:nth-child(3) {
+	background-color: var(--pen-success);
+}
+
 .code-tag {
 	color: var(--pen-primary);
 }
+
 .code-class {
 	color: var(--pen-secondary);
 }
+
 .code-string {
 	color: var(--pen-accent);
 }
 
 pui-navbar {
-	z-index: 999;
+	z-index: 99;
 	width: 100%;
 	padding: 12px;
 	display: flex;
@@ -156,26 +181,32 @@ pui-navbar {
 	background-color: var(--pen-base-100);
 	box-shadow: 0 3px 6px var(--pen-base-300), 0 5px 15px var(--pen-base-200);
 }
+
 pui-navbar .branding a {
 	display: flex;
 	align-items: center;
 }
+
 pui-navbar .branding img {
 	margin-right: 12px;
 }
+
 pui-navbar .branding a {
-  font-size: 1.5em;
-  text-decoration: none;
-  color: var(--pen-primary-content);
+	font-size: 1.5em;
+	text-decoration: none;
+	color: var(--pen-primary-content);
 }
+
 pui-navbar nav {
 	position: relative;
 }
+
 pui-navbar #menuIcon {
 	font-size: 1.4em;
 }
+
 .dropdown {
-  display: none;
+	display: none;
 	position: absolute;
 	top: 110%;
 	right: 0;
@@ -185,18 +216,22 @@ pui-navbar #menuIcon {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 3px 6px rgba(0, 0, 0, .24);
 	overflow: hidden;
 }
+
 .dropdown.open {
-  display: block;
+	display: block;
 }
+
 .dropdown ul {
 	margin: 0;
 	padding: 4px;
 	list-style: none;
 }
+
 .dropdown li {
 	margin: 0;
 	padding: 0;
 }
+
 .dropdown li a {
 	display: block;
 	padding: 8px 12px;
@@ -204,10 +239,12 @@ pui-navbar #menuIcon {
 	color: var(--pen-base-content);
 	border-left: 4px solid transparent;
 }
+
 .dropdown li a:hover {
 	background-color: var(--pen-base-200);
 	border-left-color: var(--pen-secondary);
 }
+
 .dropdown a i {
 	margin-right: 8px;
 	font-size: 1.15em;

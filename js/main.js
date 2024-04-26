@@ -6,23 +6,23 @@ class PenguinNavbar extends HTMLElement {
 
 		this.menuOpen = false;
 
-    this.menuItems = [
-      {
-        name: 'Home',
-        icon: 'nf-md-home',
-        link: '/index.html',
-      },
-      {
-        name: 'Buttons',
-        icon: 'nf-md-rectangle',
-        link: '/components/button/button.html',
-      },
-      {
-        name: 'Badges',
-        icon: 'nf-cod-circle_small_filled',
-        link: '/components/badge/badge.html',
-      },
-    ];
+		this.menuItems = [
+			{
+				name: 'Home',
+				icon: 'nf-md-home',
+				link: '/index.html',
+			},
+			{
+				name: 'Buttons',
+				icon: 'nf-md-rectangle',
+				link: '/components/button/button.html',
+			},
+			{
+				name: 'Badges',
+				icon: 'nf-cod-circle_small_filled',
+				link: '/components/badge/badge.html',
+			},
+		];
 	}
 
 	connectedCallback() {
@@ -30,24 +30,24 @@ class PenguinNavbar extends HTMLElement {
 		this.listeners();
 	}
 
-  menuItem(item) {
-    return `
-      <li>
-        <a href="${item.link}">
-          <i class="nf ${item.icon}"></i>
-          ${item.name}
-        </a>
-      </li>
-    `;
-  }
+	menuItem(item) {
+		return `
+			<li>
+				<a href="${item.link}">
+					<i class="nf ${item.icon}"></i>
+					${item.name}
+				</a>
+			</li>
+		`;
+	}
 
 	render() {
 		this.innerHTML = `
 			<div class="branding">
-        <a href="/index.html">
-          <img src="/assets/img/pengalf.png" alt="Penguin wizard" width="38" />
-          Penguin UI
-        </a>
+				<a href="/index.html">
+				  <img src="/assets/img/pengalf.png" alt="Penguin wizard" width="38" />
+				  Penguin UI
+				</a>
 			</div>
 			<nav>
 				<button id="menuToggle" class="btn btn-ghost btn-neutral">
@@ -55,7 +55,7 @@ class PenguinNavbar extends HTMLElement {
 				</button>
 				<div id="mainMenu" class="dropdown">
 					<ul>
-            ${ this.menuItems.map(item => this.menuItem(item)).join('') }
+						${this.menuItems.map(item => this.menuItem(item)).join('')}
 					</ul>
 				</div>
 			</nav>
@@ -65,7 +65,7 @@ class PenguinNavbar extends HTMLElement {
 	listeners() {
 		const menuButton = this.querySelector("#menuToggle");
 		const menuIcon = this.querySelector("#menuIcon");
-    const mainMenu = this.querySelector("#mainMenu");
+		const mainMenu = this.querySelector("#mainMenu");
 
 		menuButton.addEventListener("click", (event) => {
 			event.preventDefault();

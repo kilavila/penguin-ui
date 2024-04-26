@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Toast | Penguin UI</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/css/main.css" rel="stylesheet">
+	<script src="/js/main.js" type="module"></script>
+	<script src="./toast.component.js" type="module"></script>
+</head>
+
+<body class="preview">
+
+	<pui-navbar></pui-navbar>
+
+	<h1>Toast Component</h1>
+
+	<div class="elements">
+
+		<div class="toast toast-info">
+			<div class="toast-icon">
+				<i class="nf nf-md-information"></i>
+			</div>
+			<div class="toast-content">
+				<div class="toast-header">
+					Notification info
+				</div>
+				<div class="toast-body">
+					Some info notification message
+				</div>
+			</div>
+		</div>
+
+		<div class="toast toast-success">
+			<div class="toast-icon">
+				<i class="nf nf-fa-check_circle"></i>
+			</div>
+			<div class="toast-content">
+				<div class="toast-header">
+					Notification success
+				</div>
+				<div class="toast-body">
+					Some success notification message
+				</div>
+			</div>
+		</div>
+
+		<div class="toast toast-warning">
+			<div class="toast-icon">
+				<i class="nf nf-fa-warning"></i>
+			</div>
+			<div class="toast-content">
+				<div class="toast-header">
+					Notification warning
+				</div>
+				<div class="toast-body">
+					Some warning notification message
+				</div>
+			</div>
+		</div>
+
+		<div class="toast toast-error">
+			<div class="toast-icon">
+				<i class="nf nf-md-close_circle"></i>
+			</div>
+			<div class="toast-content">
+				<div class="toast-header">
+					Notification error
+				</div>
+				<div class="toast-body">
+					Some error notification message
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="elements">
+		<a href="./toast.css" class="btn btn-raised btn-success" target="_blank" download>
+			Download CSS
+		</a>
+
+		<a href="./toast.component.js" class="btn btn-raised btn-primary" target="_blank" download>
+			Download JS
+		</a>
+	</div>
+
+	<table>
+		<thead>
+			<tr>
+				<td>Class</td>
+				<td>Attribute</td>
+				<td>Description</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>toast</td>
+				<td>pui-toast</td>
+				<td>Notification</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="module">
+		import {Toaster} from './toast.component.js';
+
+		let toaster = new Toaster('bottom', 'right');
+		document.body.append(toaster);
+
+		let infoToast = {
+			type: 'info',
+			icon: 'nf nf-md-information',
+			title: 'Notification info',
+			message: 'This is an info notification..',
+			time: 15000
+		};
+		let successToast = {
+			type: 'success',
+			icon: 'nf nf-fa-check_circle',
+			title: 'Notification success',
+			message: 'This is a success notification!',
+			time: 15000
+		};
+		let warningToast = {
+			type: 'warning',
+			icon: 'nf nf-fa-warning',
+			title: 'Notification warning',
+			message: 'This is a warning notification.',
+			time: 15000
+		};
+		let errorToast = {
+			type: 'error',
+			icon: 'nf nf-md-close_circle',
+			title: 'Notification error',
+			message: 'This is an error notification!',
+			time: 15000
+		};
+
+		setTimeout(() => {
+			toaster.notify(infoToast);
+		}, 2000);
+		setTimeout(() => {
+			toaster.notify(successToast);
+		}, 4000);
+		setTimeout(() => {
+			toaster.notify(warningToast);
+		}, 6000);
+		setTimeout(() => {
+			toaster.notify(errorToast);
+			console.log(toaster.history());
+		}, 8000);
+
+		// this.type = type ? type : this.getAttribute('type');
+		// this.icon = icon ? icon : this.getAttribute('icon');
+		// this.title = title ? title : this.getAttribute('title');
+		// this.message = message ? message : this.getAttribute('message');
+		// this.time = time ? time : this.getAttribute('time');
+	</script>
+
+</body>
+
+</html>
