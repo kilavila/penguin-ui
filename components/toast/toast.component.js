@@ -20,7 +20,7 @@ class PenguinToastContainer extends HTMLElement {
 	notify(notification) {
 		const container = this.querySelector('.toast-container-inner');
 		const newToast = new PenguinToast(notification);
-		this.toastList.push(newToast);
+		this.toastList.push(notification);
 
 		this.yPos === 'bottom'
 			? container.append(newToast)
@@ -47,17 +47,24 @@ class PenguinToast extends HTMLElement {
 	connectedCallback() {
 		this.render();
 		this.timer();
+		this.listeners();
 	}
 
-	// TODO: Fade out animation
-	fadeOut() { }
+	fadeOut() {
+		this.classList.remove('toast-slide-in');
+		this.classList.add('toast-fade-out');
+
+		setTimeout(() => {
+			this.remove();
+		}, 1050);
+	}
 
 	timer() {
 		!this.time
 			? this.time = 7000
 			: null;
 
-		this.counter = setTimeout(() => this.remove(), this.time); // FIX: Change this.remove() to this.fadeOut()
+		this.counter = setTimeout(() => this.fadeOut(), this.time);
 	}
 
 	// TODO: Add progress bar?
@@ -78,9 +85,19 @@ class PenguinToast extends HTMLElement {
 		`;
 	}
 
-	// TODO: Mouseover and click events
-	// Stop timer and click to expand/remove?
-	listeners() { }
+	listeners() {
+		this.addEventListener('mouseover', (event) => {
+			event.preventDefault();
+			console.log('mouse over');
+			clearTimeout(this.counter);
+		});
+
+		this.addEventListener('click', (event) => {
+			event.preventDefault();
+			console.log('clicked');
+			this.fadeOut();
+		});
+	}
 
 }
 

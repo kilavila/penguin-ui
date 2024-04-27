@@ -1,5 +1,3 @@
-import { Button } from '/components/button/button.component.js';
-
 class PenguinNavbar extends HTMLElement {
 	constructor() {
 		super();
@@ -13,14 +11,24 @@ class PenguinNavbar extends HTMLElement {
 				link: '/index.html',
 			},
 			{
+				name: 'Badges',
+				icon: 'nf-cod-circle_small_filled',
+				link: '/components/badge/badge.html',
+			},
+			{
 				name: 'Buttons',
 				icon: 'nf-md-rectangle',
 				link: '/components/button/button.html',
 			},
 			{
-				name: 'Badges',
-				icon: 'nf-cod-circle_small_filled',
-				link: '/components/badge/badge.html',
+				name: 'Carousel',
+				icon: 'nf-md-view_carousel',
+				link: '/components/carousel/carousel.html',
+			},
+			{
+				name: 'Toast',
+				icon: 'nf-md-notification_clear_all',
+				link: '/components/toast/toast.html',
 			},
 		];
 	}

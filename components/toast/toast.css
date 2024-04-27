@@ -3,7 +3,6 @@ pui-toast-container {
 	position: absolute;
 	min-width: 400px;
 	padding: 18px 12px;
-	pointer-events: none;
 	overflow: visible;
 }
 
@@ -48,6 +47,11 @@ pui-toast-container {
 	animation: 2s toastFadeIn;
 }
 
+.toast-fade-out {
+	opacity: 0.0000001;
+	animation: 1s toastFadeOut;
+}
+
 @keyframes toastSlideIn {
 	0% {
 		max-height: 1px;
@@ -65,6 +69,16 @@ pui-toast-container {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes toastFadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.0000001;
 	}
 }
 
