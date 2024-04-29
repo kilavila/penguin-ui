@@ -1,0 +1,90 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css');
+
+pui-code-ex {
+	width: 100%;
+	max-width: 550px;
+	background-color: var(--pen-neutral);
+	box-shadow: 0 3px 6px var(--pen-base-300-dark), 0 5px 15px var(--pen-base-200-dark);
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.code-ex-header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--pen-base-300-dark);
+	color: var(--pen-neutral-content);
+}
+
+.code-buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 6px;
+	padding-left: 10px;
+}
+
+.code-buttons>* {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+
+.code-buttons .code-close {
+	background-color: var(--pen-error);
+}
+
+.code-buttons .code-maximize {
+	background-color: var(--pen-warning);
+}
+
+.code-buttons .code-minimize {
+	background-color: var(--pen-success);
+}
+
+button.code-ex-copy {
+	width: 36px;
+	height: 36px;
+	margin-right: -1px;
+	padding: 0 0 0 6px;
+	font-size: 0.8em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--pen-base-100-dark);
+	border: none;
+	border-radius: 0;
+}
+
+.code-ex-body,
+.code-ex-body pre,
+.code-ex-body pre code {
+	margin: 0;
+	padding: 0;
+}
+
+.code-ex-body {
+	position: relative;
+	padding: 12px 0;
+}
+
+.code-ex-body pre code {
+	background-color: var(--pen-neutral);
+	color: var(--pen-neutral-content);
+}
+
+.code-ex-lang {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	/* padding: 4px 6px 6px 8px; */
+	/* background-color: var(--pen-info); */
+	color: var(--pen-warning);
+	border-radius: 4px;
+	font-family: monospace;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}

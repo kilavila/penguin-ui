@@ -1,11 +1,13 @@
 /* INFO: IMPORT COLORSCHEME */
 @import url("/css/penguin-ui-light.css");
 @import url("https://www.nerdfonts.com/assets/css/webfont.css");
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css'); */
 
 /* INFO: IMPORT COMPONENTS */
 @import url("/components/badge/badge.css");
 @import url("/components/button/button.css");
 @import url("/components/carousel/carousel.css");
+@import url("/components/code/code.css");
 @import url("/components/toast/toast.css");
 
 * {
@@ -115,7 +117,7 @@ body.preview .elements>* {
 	margin: 12px;
 }
 
-pre {
+/* pre {
 	width: 100%;
 	max-width: 550px;
 	font-family: monospace;
@@ -130,9 +132,9 @@ pre code {
 	border-radius: 4px;
 	color: var(--pen-neutral-content);
 	font-size: 1.25em;
-}
+} */
 
-.code-control-buttons {
+/* .code-control-buttons {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -169,7 +171,7 @@ pre code {
 
 .code-string {
 	color: var(--pen-accent);
-}
+} */
 
 pui-navbar {
 	z-index: 99;
